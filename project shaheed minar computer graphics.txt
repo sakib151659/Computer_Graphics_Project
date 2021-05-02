@@ -1,0 +1,419 @@
+#include <graphics.h>
+#include<stdlib.h>
+int main()
+{
+   int gd = DETECT, gm;
+   initgraph(&gd, &gm, "C:\\TC\\BGI");
+   initwindow(1050, 1000);
+   int page =0;
+
+
+//BUS
+for(int i=0;i<=850;i++){
+     //lower part
+     line(50+i,630,120+i,630);
+   arc(150+i,630,0,180,30);
+   line(180+i,630,260+i,630);
+   arc(290+i,630,0,180,30);
+
+   line(320+i,630,410+i,630);
+   //wheel
+   setcolor(WHITE);
+   setfillstyle(SOLID_FILL,DARKGRAY);
+   circle(150+i,630,25);
+   floodfill(150+i,630,WHITE);
+   setcolor(WHITE);
+   setfillstyle(SOLID_FILL,DARKGRAY);
+   circle(290+i,630,25);
+   floodfill(290+i,630,WHITE);
+
+   //upper side
+   line(50+i,630,50+i,520);
+   line(50+i,520,410+i,520);
+   line(410+i,520,410+i,630);
+
+   line(50+i,580,410+i,580);
+
+   //
+
+   line(140+i,520,140+i,580);
+
+   line(230+i,520,230+i,580);
+   line(320+i,520,320+i,580);
+   //window
+
+   rectangle(60+i,530,130+i,570);
+
+   rectangle(150+i,530,220+i,570);
+   rectangle(240+i,530,310+i,570);
+   rectangle(330+i,530,400+i,570);
+   //drivar
+   line(380+i,550,400+i,570);
+   circle(380+i,550,5);
+   circle(355+i,545,10);
+   line(355+i,553,355+i,570);
+   line(355+i,553,380+i,550);
+   // double buffering
+   setactivepage(page);
+setvisualpage(1 - page);
+
+  cleardevice();
+  delay(20);
+   page=1-page;
+
+  //setcolor(GREEN);
+    line(0,505,1050,505);
+   // setfillstyle(SOLID_FILL,GREEN);
+   line(0,655,1050,655);
+   //floodfill(200,660,GREEN);
+
+
+   //Shaheed minar
+   setcolor(WHITE);
+   setfillstyle(SOLID_FILL,8);
+   rectangle(600,450,950,460);
+   floodfill(605,455,WHITE);
+   rectangle(590,460,960,470);
+   floodfill(595,465,WHITE);
+   rectangle(580,470,970,480);
+   floodfill(585,475,WHITE);
+   //1st minar
+   rectangle(610,350,645,450);
+   setfillstyle(SOLID_FILL,WHITE);
+   rectangle(620,360,635,450);
+   floodfill(620,353,WHITE);
+   //2nd
+   rectangle(675,325,715,450);
+   setfillstyle(SOLID_FILL,WHITE);
+   rectangle(685,335,705,450);
+   floodfill(685,327,WHITE);
+   //3rd
+   rectangle(740,300,750,450);
+   setfillstyle(SOLID_FILL,WHITE);
+
+   floodfill(745,307,WHITE);
+
+
+   setfillstyle(SOLID_FILL,WHITE);
+   rectangle(770,300,780,450);
+   floodfill(775,307,WHITE);
+  setfillstyle(SOLID_FILL,WHITE);
+   rectangle(800,300,810,450);
+   floodfill(805,307,WHITE);
+
+
+    setcolor(WHITE);
+   // 1st uper slide
+
+   line(740,300,785,240);
+    line(741,300,785,241);
+    line(742,300,785,242);
+    line(743,300,785,243);
+   line(744,300,785,244);
+    line(745,300,785,245);
+    line(746,300,785,246);
+    line(747,300,785,247);
+    line(748,300,785,248);
+    line(749,300,785,249);
+    line(750,300,785,250);
+    line(750,300,785,251);
+    line(751,300,785,252);
+
+
+
+    setcolor(WHITE);
+    //3rd side
+    line(810,300,855,240);
+    line(800,300,835,253);
+
+    line(800,300,845,240);
+    line(801,300,846,240);
+    line(802,300,847,240);
+    line(803,300,848,240);
+    line(804,300,849,240);
+    line(805,300,850,240);
+    line(806,300,851,240);
+    line(807,300,852,240);
+    line(808,300,853,240);
+    line(809,300,854,240);
+    line(810,300,855,240);
+
+   // 2nd side
+   line(770,300,805,253);
+   line(771,300,806,253);
+    line(772,300,807,253);
+    line(773,300,808,253);
+    line(774,300,809,253);
+    line(775,300,810,253);
+    line(776,300,811,253);
+    line(777,300,812,253);
+    line(778,300,813,253);
+    line(779,300,814,253);
+    line(780,300,815,253);
+
+   // upper side all frist line joint
+    line(785,240,855,240);
+    line(786,241,845,241);
+    line(786,242,846,242);
+    line(786,243,847,243);
+    line(786,244,848,244);
+    line(786,245,849,245);
+    line(786,246,850,246);
+
+    line(786,247,850,247);
+    line(786,248,849,248);
+    line(786,249,848,249);
+    line(786,250,847,250);
+    line(786,251,846,251);
+    line(786,252,845,252);
+
+   //joint 1 st side
+line(785,253,805,253);
+//joint2nd side down
+   line(815,253,835,253);
+
+
+
+//circle
+   setcolor(RED);
+   setfillstyle(SOLID_FILL,RED);
+   circle(775,375,48);
+   floodfill(775,375,RED);
+
+   //4th
+     setcolor(WHITE);
+     //setfillstyle(SOLID_FILL,WHITE);
+    rectangle(835,325,875,450);
+    //floodfill(836,327,WHITE);
+    setfillstyle(SOLID_FILL,WHITE);
+    rectangle(845,335,865,450);
+    floodfill(845,327,WHITE);
+  //5th
+  rectangle(900,350,940,450);
+  setfillstyle(SOLID_FILL,WHITE);
+  rectangle(910,360,930,450);
+  floodfill(910,353,WHITE);
+
+//school
+  //middle part
+   setcolor(WHITE);
+   setfillstyle(SOLID_FILL,CYAN);
+  rectangle(135,310,145,475);
+  floodfill(140,315,WHITE);
+  rectangle(270,310,280,475);
+  floodfill(275,315,WHITE);
+   setcolor(WHITE);
+   setfillstyle(SOLID_FILL,8);
+  rectangle(145,465,270,475);
+  floodfill(150,470,WHITE);
+  rectangle(150,455,265,465);
+  floodfill(155,460,WHITE);
+  rectangle(155,445,260,455);
+  floodfill(160,450,WHITE);
+
+  //side
+
+  line(125,310,135,310);
+  line(290,310,280,310);
+
+
+  //90
+  line(125,310,125,300);
+  line(290,310,290,300);
+
+  //1st triangle
+  //setcolor(WHITE);
+  //setfillstyle(SOLID_FILL,3);
+  line(125,300,205,170);
+  line(290,300,205,170);
+  //floodfill(270,300,WHITE);
+  //2nd triangle
+  line(135,310,205,190);
+  line(280,310,205,190);
+  //floodfill(250,300,WHITE);
+
+  //clock
+  setcolor(WHITE);
+  setfillstyle(SOLID_FILL,5);
+  circle(208,255,25);
+  floodfill(215,255,WHITE);
+  //rectangle
+  setcolor(WHITE);
+  setfillstyle(SOLID_FILL,6);
+  rectangle(160,400,205,445);
+  floodfill(165,405,WHITE);
+
+   rectangle(205,400,255,445);
+   floodfill(210,405,WHITE);
+
+   //upper rectangle
+   setcolor(WHITE);
+   setfillstyle(SOLID_FILL,9);
+   rectangle(155,310,260,350);
+   floodfill(160,315,WHITE);
+   setcolor(WHITE);
+   setfillstyle(SOLID_FILL,10);
+
+   rectangle(155,350,260,370);
+   floodfill(160,355,WHITE);
+
+   //left side
+   setcolor(WHITE);
+   setfillstyle(SOLID_FILL,GREEN);
+   rectangle(10,335,135,350);
+   floodfill(15,340,WHITE);
+   setfillstyle(SOLID_FILL,BLUE);
+   rectangle(20,390,135,415);
+   floodfill(25,395,WHITE);
+   setfillstyle(SOLID_FILL,8);
+   rectangle(35,465,135,475);
+   floodfill(40,470,WHITE);
+setfillstyle(SOLID_FILL,3);
+   rectangle(25,350,35,390);
+   floodfill(30,355,WHITE);
+   rectangle(25,415,35,475);
+   floodfill(30,420,WHITE);
+// uper line
+   line(25,325,135,325);
+   line(10,335,25,325);
+   // right dide
+   setcolor(WHITE);
+   setfillstyle(SOLID_FILL,GREEN);
+   rectangle(280,335,405,350);
+   floodfill(285,340,WHITE);
+    setfillstyle(SOLID_FILL,BLUE);
+   rectangle(280,390,395,415);
+   floodfill(285,395,WHITE);
+   setfillstyle(SOLID_FILL,8);
+   rectangle(280,465,380,475);
+   floodfill(285,470,WHITE);
+   setfillstyle(SOLID_FILL,3);
+   rectangle(380,350,390,390);
+   floodfill(385,355,WHITE);
+   rectangle(380,415,390,475);
+   floodfill(385,420,WHITE);
+
+   line(280,325,385,325);
+   line(405,335,385,325);
+    //flag
+   setcolor(BROWN);
+   setfillstyle(SOLID_FILL,BROWN);
+   rectangle(335,258,340,490);
+   floodfill(338,265,BROWN);
+
+   setcolor(GREEN);
+   setfillstyle(SOLID_FILL,GREEN);
+   rectangle(335,260,425,315);
+   floodfill(370,300,GREEN);
+
+   setcolor(RED);
+   setfillstyle(SOLID_FILL,RED);
+   circle(380,288,20);
+   floodfill(385,285,RED);
+   setcolor(WHITE);
+   setfillstyle(SOLID_FILL,8);
+   rectangle(330,485,345,495);
+   floodfill(340,490,WHITE);
+
+
+ //last colour
+   setcolor(WHITE);
+   setfillstyle(SOLID_FILL,GREEN);
+   floodfill(200,700,WHITE);
+
+
+   //mountain
+   setcolor(WHITE);
+   setfillstyle(SOLID_FILL,GREEN);
+   line(0,150,100,75);
+   line(100,75,200,150);
+
+    setcolor(WHITE);
+   setfillstyle(SOLID_FILL,GREEN);
+   line(175,130,275,75);
+   line(275,75,375,150);
+  setcolor(WHITE);
+   setfillstyle(SOLID_FILL,GREEN);
+   line(350,130,450,75);
+   line(450,75,550,150);
+   setcolor(WHITE);
+   setfillstyle(SOLID_FILL,GREEN);
+   line(525,130,600,75);
+   line(600,75,750,150);
+
+   line(0,150,750,150);
+   floodfill(110,108,WHITE);
+   floodfill(275,136,WHITE);
+   floodfill(450,136,WHITE);
+   floodfill(600,136,WHITE);
+   //sun
+   setcolor(WHITE );
+   setfillstyle(SOLID_FILL,YELLOW);
+
+   circle(50+i,40,30);
+   floodfill(50+i,40,WHITE);
+   //line(15,85,40,68);
+   //line()
+   //cloud
+   setcolor(WHITE);
+   setfillstyle(SOLID_FILL,BLUE);
+  ellipse(200+i,40,0,180,30,25);
+  ellipse(230+i,65,285,90,40,30);
+  ellipse(215+i,95,210,360,25,30);
+  ellipse(180+i,85,180,300,30,30);
+  ellipse(170+i,65,85,235,30,25);
+  floodfill(200+i,65,WHITE);
+
+  setcolor(WHITE);
+   setfillstyle(SOLID_FILL,BLUE);
+  ellipse(900-i,70,0,180,30,25);
+  ellipse(930-i,95,285,90,40,30);
+  ellipse(915-i,125,210,360,25,30);
+  ellipse(880-i,115,180,300,30,30);
+  ellipse(870-i,95,85,235,30,25);
+  floodfill(900-i,95,WHITE);
+
+   //tree
+   setcolor(WHITE);
+   setfillstyle(SOLID_FILL,GREEN);
+  ellipse(490,360,0,180,30,25);
+  ellipse(520,385,285,90,40,30);
+  ellipse(505,415,210,360,25,30);
+  ellipse(470,405,180,300,30,30);
+  ellipse(460,385,85,235,30,25);
+  floodfill(490,385,WHITE);
+
+
+setcolor(WHITE);
+   setfillstyle(SOLID_FILL,BROWN);
+
+rectangle(475,430,495,500);
+floodfill(480,435,WHITE);
+
+//tree
+   setcolor(WHITE);
+   setfillstyle(SOLID_FILL,GREEN);
+  ellipse(990,360,0,180,30,25);
+  ellipse(1020,385,285,90,40,30);
+  ellipse(1005,415,210,360,25,30);
+  ellipse(970,405,180,300,30,30);
+  ellipse(960,385,85,235,30,25);
+  floodfill(980,390,WHITE);
+
+
+setcolor(WHITE);
+   setfillstyle(SOLID_FILL,BROWN);
+
+rectangle(990,440,1010,500);
+floodfill(995,450,WHITE);
+
+
+
+   }
+
+
+
+   getch();
+   closegraph();
+   return 0;
+}
